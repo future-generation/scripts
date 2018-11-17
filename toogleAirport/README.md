@@ -1,5 +1,5 @@
 # toogleAirport
-Irgendwo gefunden
+Vor 100 Jahren irgendwo mal gefunden
 ## Script in folgendes Verzeichnis:
 /Library/Scripts/toggleAirport.sh
 ## Rechte setzen:
