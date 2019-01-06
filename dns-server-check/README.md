@@ -1,6 +1,6 @@
 # Automatic DNS check for dnsmasq
-Check whether the configured DNS servers are responding.<br />
-Delete all DNS servers that are not responding.<br />
+Check if all configured DNS servers are responding.<br />
+Delete all DNS servers from server.conf that are not responding.<br />
 If less than 3 DNS servers are set up, create a new server.conf.<br />
 The DNS servers are selected from 2 lists:
  - First select all DNS servers from the list of preferred DNS servers.
