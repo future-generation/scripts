@@ -1,1 +1,1 @@
-# Automatic DNS-Check for dnsmasq
+# Automatic DNS check for dnsmasq
