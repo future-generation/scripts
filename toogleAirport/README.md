@@ -1,10 +1,10 @@
 # toogleAirport
-Vor 100 Jahren irgendwo mal gefunden
-## Script in folgendes Verzeichnis:
+Found somewhere 100 years ago.
+## Script to the following directory:
 /Library/Scripts/toggleAirport.sh
-## Rechte setzen:
+## Set permissions:
 sudo chmod 755 /Library/Scripts/toggleAirport.sh
-## PLIST in folgendes Verzeichnis:
+## PLIST to the following directory:
 /System/Library/LaunchAgents/com.mine.toggleairport.plist
-## Starten des Dienstes mit:
+## Start the service with:
 sudo launchctl load /System/Library/LaunchAgents/com.mine.toggleairport.plist
