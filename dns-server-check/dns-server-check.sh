@@ -1,6 +1,6 @@
 #!/bin/bash
 # DNS server check script:
-# Testing installed DNS servers. Deleting all DNS server not responding.
+# Testing all installed DNS servers. Deleting all DNS server not responding.
 # If less than 3 DNS servers are set up, set up the server.conf again.
 # Prefer Prefered-DNS list and populate with backup DNS list to 5 entries.
 
