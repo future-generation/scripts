@@ -10,7 +10,7 @@ host="[USERNAME]@[FQDN]"
 target="$HOME/[MOUNTFOLDER]"
 echo "$pass"|base64 --decode|sshfs -o password_stdin $host:/ $target	# Connect via sshfs with password
 #sshfs -o IdentityFile=$sshkey $host:/ $target	# Connect via sshfs with certificate
-cd $target/ttrss	# Move into sshfs mountpoint
+cd $target	# Move into sshfs mountpoint
 git pull origin master	# Update remote folder with git repo
 cd $HOME	# Move out otherwise unmount sshfs target is blocked
 umount $target	# Unmount sshfs connection
