@@ -11,6 +11,12 @@ target="$HOME/[MOUNTFOLDER]"
 echo "$pass"|base64 --decode|sshfs -o password_stdin $host:/ $target	# Connect via sshfs with password
 #sshfs -o IdentityFile=$sshkey $host:/ $target	# Connect via sshfs with certificate
 cd $target	# Move into sshfs mountpoint
-git pull origin master	# Update remote folder with git repo
+if ! [[ "$(git log --pretty=%H ...refs/heads/master^ | head -n 1)" = "$(git ls-remote origin -h refs/heads/master |cut -f1)" ]]; then
+	git pull origin master	# Update remote folder with git repo
+	terminal-notifier -title "Tiny Tiny RSS" -subtitle "Local branch synced" -message "Git pull finished"
+else
+	echo "Nothing new in git repo. No sync needed."
+	terminal-notifier -title "Tiny Tiny RSS" -subtitle "Local branch up-to-date" -message "No git pull needed"
+fi
 cd $HOME	# Move out otherwise unmount sshfs target is blocked
 umount $target	# Unmount sshfs connection
